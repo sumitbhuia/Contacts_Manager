@@ -4,36 +4,39 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
+        android:alpha="1"
         android:shadowColor="@color/black"
-        app:cardBackgroundColor="@color/brown"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="20dp">
+        app:cardBackgroundColor="#994D1C"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
 
 
         <LinearLayout
             android:id="@+id/listItemLayout"
-            android:layout_width="match_parent"
+            android:layout_width="371dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <TextView
                 android:id="@+id/name_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Your name"
-                android:textSize="28sp" />
+                android:textColor="@color/black"
+
+                android:textSize="26sp" />
 
             <TextView
                 android:id="@+id/email_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Your email"
-                android:textSize="28sp" />
+                android:textColor="@color/black"
 
-
+                android:textSize="18sp" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

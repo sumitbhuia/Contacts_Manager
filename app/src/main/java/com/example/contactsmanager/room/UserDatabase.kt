@@ -16,7 +16,7 @@ abstract class UserDatabase:RoomDatabase() {
         private var INSTANCE: UserDatabase? = null
 
         // public function to retrieve the singleton instance
-        fun getInstance(context: Context): UserDatabase? {
+        fun getInstance(context: Context): UserDatabase {
 
             synchronized(this) {
                 var instance = INSTANCE
@@ -26,12 +26,12 @@ abstract class UserDatabase:RoomDatabase() {
                     // creating database object
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        UserDatabase::class.java, "user_db"
+                        UserDatabase::class.java, "users_db"
                     ).build()
                 }
 
                 // return the singleton instance
-                return INSTANCE
+                return instance
 
             }
         }

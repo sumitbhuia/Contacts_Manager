@@ -30,8 +30,8 @@ data class User(
 
     // Sets table column(2) name = user_ name
     @ColumnInfo(name ="user_name")
-    val name : String ,
+    var name : String ,
 
     // Sets table column(3) name = user_ email
     @ColumnInfo(name ="user_email")
-    val email : String){}
+    var email : String)
