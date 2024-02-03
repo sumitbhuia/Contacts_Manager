@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 class UserViewModel (private val repository: UserRepository) : ViewModel(),Observable{
     val user = repository.users
 
+    val users = repository.users
     private var isUpdateOrDelete = false
     private lateinit var userToUpdateOrDelete :User
 
@@ -32,6 +33,7 @@ class UserViewModel (private val repository: UserRepository) : ViewModel(),Obser
     init {
         saveOrUpdateButtonText.value = "Save"
         clearAllOrDeleteButtonText.value = "Clear All"
+
     }
 
     fun saveOrUpdate(){
@@ -90,6 +92,7 @@ class UserViewModel (private val repository: UserRepository) : ViewModel(),Obser
 
 
     fun initUpdateAndDelete(user:User){
+        userToUpdateOrDelete = user
         inputName.value=user.name
         inputEmail.value=user.email
         isUpdateOrDelete=true
