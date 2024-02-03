@@ -62,10 +62,10 @@ class UserViewModel (private val repository: UserRepository) : ViewModel(),Obser
 
     }
 
-    fun insert(user: User) = viewModelScope.launch {
+    private fun insert(user: User) = viewModelScope.launch {
         repository.insert(user)
     }
-    fun update(user: User) = viewModelScope.launch {
+    private fun update(user: User) = viewModelScope.launch {
         repository.update(user)
         inputName.value=null
         inputEmail.value=null
@@ -75,7 +75,7 @@ class UserViewModel (private val repository: UserRepository) : ViewModel(),Obser
 
     }
 
-   fun delete(user: User) = viewModelScope.launch {
+   private fun delete(user: User) = viewModelScope.launch {
         repository.delete(user)
         inputName.value=null
         inputEmail.value=null
@@ -85,7 +85,7 @@ class UserViewModel (private val repository: UserRepository) : ViewModel(),Obser
 
     }
 
-   fun clearAll() = viewModelScope.launch {
+   private fun clearAll() = viewModelScope.launch {
         repository.deleteAll()
     }
 
