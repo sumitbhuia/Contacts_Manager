@@ -6,8 +6,11 @@ import androidx.room.PrimaryKey
 
 
 /*
+    Entity class -  represent tables in your app's database , in short defines the structure of database
+    ------------
+    - More or less this code is bare minimum structure  / ans almost stays the same
 
-    - Setting data class / model class as entity and table name is user
+    - Setting entity class / model class as entity and table name is user
     - This is a Model class
     - Used like a template to segregate data
     - Here we don't put and code except the parameters
@@ -34,4 +37,5 @@ data class User(
 
     // Sets table column(3) name = user_ email
     @ColumnInfo(name ="user_email")
-    var email : String)
+    var email : String
+)
